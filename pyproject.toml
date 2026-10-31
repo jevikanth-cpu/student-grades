@@ -9,16 +9,16 @@ description = "Predict the final grade (G3) of a student from UCI Student Perfor
 requires-python = ">=3.10"
 # Pin to the versions you actually run: check with `pip freeze | grep -i -E "pandas|scikit|numpy|joblib|yaml|ucimlrepo|pytest|ruff"`
 dependencies = [
-    "numpy>=1.26",
-    "pandas>=2.1",
-    "scikit-learn>=1.4",
-    "joblib>=1.3",
-    "pyyaml>=6.0",
-    "ucimlrepo>=0.0.7",
+    "numpy==2.5.4",
+    "pandas==3.1.0",
+    "scikit-learn==1.9.1",
+    "joblib==1.6.0",
+    "pyyaml==6.0.3",
+    "ucimlrepo==0.0.7",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0", "ruff>=0.5"]
+dev = ["pytest>=9.2.0", "ruff>=0.17.3"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
