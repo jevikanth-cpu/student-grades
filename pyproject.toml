@@ -26,3 +26,6 @@ where = ["src"]
 [tool.ruff]
 line-length = 88
 src = ["src", "tests"]
+
+[project.scripts]
+student-grades = "student_grades.cli:main"

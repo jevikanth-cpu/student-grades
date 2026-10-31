@@ -7,7 +7,7 @@ from student_grades.models import Trainer
 
 
 def test_scaler_is_fitted_on_train_only(config, data):
-    X_tr, X_te, _, _ = DatasetLoader(config).split(*data)
+    X_tr, _, _, _ = DatasetLoader(config).split(*data)
     prep = build_preprocessor().fit(X_tr)
     scaler = prep.named_transformers_["num"].named_steps["scale"]
     num_cols = ["age", "absences", "studytime"]
