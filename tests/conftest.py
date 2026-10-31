@@ -15,6 +15,7 @@ def config() -> dict:
         "ridge": {"model__alpha": [1.0, 10.0]},
         "lasso": {"model__alpha": [0.1]},
         "knn": {"model__n_neighbors": [5]},
+        "huber": {"model__epsilon": [1.35], "model__alpha": [1.0]},
     }
     return cfg
 

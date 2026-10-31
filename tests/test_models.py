@@ -33,7 +33,7 @@ def test_compare_picks_best_and_predictions_in_range(config, data):
     X_tr, X_te, y_tr, y_te = DatasetLoader(config).split(*data)
     trainer = Trainer(config)
     table = trainer.compare(X_tr, y_tr)
-    assert len(table) == 3
+    assert len(table) == 4
     assert table["cv_rmse"].is_monotonic_increasing
     preds = trainer.predict(X_te)
     assert preds.shape == (len(X_te),)

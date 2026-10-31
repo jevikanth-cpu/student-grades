@@ -6,7 +6,7 @@ from typing import Any
 import joblib
 import pandas as pd
 from sklearn.dummy import DummyRegressor
-from sklearn.linear_model import Lasso, LinearRegression, Ridge
+from sklearn.linear_model import HuberRegressor, Lasso, LinearRegression, Ridge
 from sklearn.model_selection import GridSearchCV, RepeatedKFold, cross_val_score
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import Pipeline
@@ -46,6 +46,7 @@ class Trainer:
             "ridge": (Ridge(), grids["ridge"]),
             "lasso": (Lasso(max_iter=10_000, random_state=seed), grids["lasso"]),
             "knn": (KNeighborsRegressor(), grids["knn"]),
+            "huber": (HuberRegressor(max_iter=1000), grids["huber"]),
         }
 
     def cv_score(
