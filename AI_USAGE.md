@@ -11,6 +11,7 @@ I used Claude (Anthropic's chat assistant) as a helper during this project, work
 | Huber model | Suggested adding Huber loss after I saw that the G3 = 0 students cause about 31% of the squared error | Added it to the config and `Trainer`, and compared it under the same CV |
 | Notebook text and README | Drafted the explanation text and the README | Checked the numbers against my own outputs |
 | Git and VS Code | Explained the commands step by step | Ran all the Git commands myself |
+| Reference list (report) | Proposed the list of references from memory | Opened the links and checked the paper's details    myself | 
 
 ## What I can explain
 
